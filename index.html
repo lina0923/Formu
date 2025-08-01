@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario SENA V1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>FORMULARIO SENA V1</h1>
+        <h2>GRACIAS POR DEJAR SUS DATOS</h2>
+
+        <form action="#" method="POST">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+
+            <label for="age">Edad:</label>
+            <input type="number" id="age" name="age" placeholder="Please enter your age" required>
+
+            <label for="buyCar">¿Planeas comprar un coche nuevo en los próximos 5 años?</label>
+            <select id="buyCar" name="buyCar">
+                <option value="yes">Sí</option>
+                <option value="no">No</option>
+                <option value="maybe">Tal vez</option>
+            </select>
+
+            <label for="carBrand">¿Cuál es tu marca de coche favorita?</label>
+            <select id="carBrand" name="carBrand">
+                <option value="">Selecciona una opción</option>
+                <option value="toyota">Toyota</option>
+                <option value="ford">Ford</option>
+                <option value="honda">Honda</option>
+                <!-- Agregar más marcas según necesidad -->
+            </select>
+
+            <label for="transport">¿Qué tipo de medio de transporte tienes?</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="car" name="transport" value="Car">
+                <label for="car">Coche</label>
+
+                <input type="checkbox" id="boat" name="transport" value="Boat">
+                <label for="boat">Barco</label>
+
+                <input type="checkbox" id="bicycle" name="transport" value="Bicycle">
+                <label for="bicycle">Bicicleta</label>
+
+                <input type="checkbox" id="motorcycle" name="transport" value="Motorcycle">
+                <label for="motorcycle">Motocicleta</label>
+
+                <input type="checkbox" id="plane" name="transport" value="Plane">
+                <label for="plane">Avión</label>
+
+                <input type="checkbox" id="bike" name="transport" value="Bike">
+                <label for="bike">Bicicleta</label>
+            </div>
+
+            <label for="comments">¿Comentarios o sugerencias?</label>
+            <textarea id="comments" name="comments" placeholder="Please enter your comments"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
