@@ -11,15 +11,15 @@
         <h1>FORMULARIO SENA V1</h1>
         <h2>GRACIAS POR DEJAR SUS DATOS</h2>
 
-        <form action="#" method="POST">
+        <form id="survey-form" action="#" method="POST">
             <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" placeholder="Please enter your name" required>
+            <input type="text" id="name" name="name" placeholder="Por favor ingresa tu nombre" required>
 
             <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" placeholder="Please enter your email" required>
+            <input type="email" id="email" name="email" placeholder="Por favor ingresa tu correo" required>
 
             <label for="age">Edad:</label>
-            <input type="number" id="age" name="age" placeholder="Please enter your age" required>
+            <input type="number" id="age" name="age" placeholder="Por favor ingresa tu edad" required>
 
             <label for="buyCar">¿Planeas comprar un coche nuevo en los próximos 5 años?</label>
             <select id="buyCar" name="buyCar">
@@ -34,35 +34,40 @@
                 <option value="toyota">Toyota</option>
                 <option value="ford">Ford</option>
                 <option value="honda">Honda</option>
-                <!-- Agregar más marcas según necesidad -->
             </select>
 
             <label for="transport">¿Qué tipo de medio de transporte tienes?</label>
             <div class="checkbox-group">
-                <input type="checkbox" id="car" name="transport" value="Car">
+                <input type="checkbox" id="car" name="transport[]" value="Car">
                 <label for="car">Coche</label>
 
-                <input type="checkbox" id="boat" name="transport" value="Boat">
+                <input type="checkbox" id="boat" name="transport[]" value="Boat">
                 <label for="boat">Barco</label>
 
-                <input type="checkbox" id="bicycle" name="transport" value="Bicycle">
+                <input type="checkbox" id="bicycle" name="transport[]" value="Bicycle">
                 <label for="bicycle">Bicicleta</label>
 
-                <input type="checkbox" id="motorcycle" name="transport" value="Motorcycle">
+                <input type="checkbox" id="motorcycle" name="transport[]" value="Motorcycle">
                 <label for="motorcycle">Motocicleta</label>
 
-                <input type="checkbox" id="plane" name="transport" value="Plane">
+                <input type="checkbox" id="plane" name="transport[]" value="Plane">
                 <label for="plane">Avión</label>
-
-                <input type="checkbox" id="bike" name="transport" value="Bike">
-                <label for="bike">Bicicleta</label>
             </div>
 
             <label for="comments">¿Comentarios o sugerencias?</label>
-            <textarea id="comments" name="comments" placeholder="Please enter your comments"></textarea>
+            <textarea id="comments" name="comments" placeholder="Por favor ingresa tus comentarios"></textarea>
 
             <button type="submit">Enviar</button>
         </form>
     </div>
+
+    <div id="modal-success" class="modal hidden">
+        <div class="modal-content">
+            <h2>¡DATOS ENVIADOS CON ÉXITO!</h2>
+            <button id="close-modal">Cerrar</button>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
 </body>
 </html>
