@@ -1,73 +1,149 @@
+:root {
+    --primary-color: #4f46e5;
+    --accent-color: #22c55e;
+    --background-color: #f9fafb;
+    --text-color: #111827;
+    --border-color: #d1d5db;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
     padding: 20px;
+    color: var(--text-color);
 }
 
 .form-container {
-    background-color: #fff;
-    padding: 30px;
-    max-width: 500px;
-    margin: 40px auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h1,
-.form-container h2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-label {
-    display: block;
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="number"],
-select,
-textarea {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: vertical;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 15px;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+form label {
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    margin-top: 6px;
+    background-color: #f3f4f6;
+    transition: border-color 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    background-color: #fff;
 }
 
 .checkbox-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    gap: 12px;
+    margin-top: 12px;
 }
 
-.checkbox-group input[type="checkbox"] {
-    margin-right: 5px;
+.checkbox-group input {
+    margin-right: 6px;
 }
 
-button {
-    margin-top: 20px;
+form button {
     width: 100%;
-    padding: 12px;
-    background-color: #28a745;
-    border: none;
+    padding: 14px;
+    margin-top: 30px;
+    background-color: var(--primary-color);
     color: white;
     font-size: 16px;
-    border-radius: 5px;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #218838;
+form button:hover {
+    background-color: #4338ca;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px 40px;
+    border-radius: 16px;
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.modal-content h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--accent-color);
+}
+
+#close-modal {
+    padding: 12px 24px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#close-modal:hover {
+    background-color: #16a34a;
 }
